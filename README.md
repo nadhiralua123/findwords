@@ -77,7 +77,7 @@ int vertikal(char* z){
 		 vr5[]="zzznokeewgomqtw",
 		 vr6[]="wmzngwssootqlti",
 		 vr7[]="aszmmmwwsdaudmn",
-		 		 vr8[]="tnerapeebjnwzmt",
+		 vr8[]="tnerapeebjnwzmt",
 		 vr9[]="egtzmawwqcavmhe",
 		 vr10[]="rrdjwrnnhpdvpfr",
 		 vr11[]="jdbjpkaaantbmow",
@@ -219,3 +219,74 @@ int diagonal2(char *z){
 		 ddr16[]="tnbjmpqswnpsj",
 		 ddr17[]="gddzamretwwa",
 		 ddr18[]="jrtrmwegoeb",
+		 ddr19[]="rgemgkncer",
+		 ddr20[]="enznopnze",
+		 ddr21[]="tscnroia",
+		 ddr22[]="amzqfnd",
+		 ddr23[]="wzgzbo",
+		 ddr24[]="zrsqq",
+		 ddr25[]="kcol",
+		 ddr26[]="ndm",
+		 ddr27[]="hp",
+		 *pdd[]={dd1,dd2,dd3,dd4,dd5,dd6,dd7,dd8,dd9,dd10,dd11,dd12,dd13,dd14,dd15,dd16,dd17,dd18,dd19,dd20,dd21,dd22,dd23,dd24,dd25,dd26,dd27,dd28,dd29,
+		         ddr1,ddr2,ddr3,ddr4,ddr5,ddr6,ddr7,ddr8,ddr9,ddr10,ddr11,ddr12,ddr13,ddr14,ddr15,ddr16,ddr17,ddr18,ddr19,ddr20,ddr21,ddr22,ddr23,ddr24,ddr25,ddr26,ddr27};
+		 
+	for(int x=0;x<56;x++){
+		if (strstr(*(pdd+x),z) != '\0'){
+		f++;
+		}
+	}
+	if(f==0)
+		return 0;
+	else
+		return 1;		
+}
+
+int main(){
+	int n,f;
+	char az[15][15] = {{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+	{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
+    {'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
+    {'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
+    {'b','w','p','l','o','t','a','n','a','d','t','p','g','n','c'},
+    {'r','e','w','n','g','o','d','j','c','p','n','a','t','n','k'},
+    {'e','e','o','t','w','o','s','b','q','h','a','r','r','s','a'},
+    {'a','z','c','g','e','s','w','e','w','n','a','k','n','p','b'},
+    {'d','i','n','n','e','r','q','o','d','l','w','d','c','a','r'},
+    {'o','n','o','p','k','w','m','p','a','r','k','t','z','c','c'},
+    {'q','b','f','r','o','g','m','a','m','w','p','w','e','e','y'},
+    {'l','q','z','q','n','n','m','r','z','j','j','s','c','l','g'},
+    {'m','o','s','g','z','c','z','e','t','d','b','o','o','t','o'},
+    {'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
+    {'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}};
+	int (*F_cari[])(char*)={horizontal,vertikal,diagonal1,diagonal2};
+	
+	cout<<"MENCARI KATA PADA TABEL HURUF\n\n";
+	for(int x=0;x<15;x++){
+		for(int y=0;y<15;y++){
+			cout<<az[x][y]<<" ";
+		}
+		cout<<endl;
+	}
+	cout<<"\nBanyak kata yang dicari : ";cin>>n;
+	char g[n][20];
+	cout<<"\nInput kata yang dicari : \n";
+	for (int i=0;i<n;i++){
+		cin>>g[i];
+	}
+	cout<<endl;
+	for(int a=0;a<n;a++){
+		f=0;
+		for(int y=0;y<4;y++){
+			if ((*F_cari[y])(g[a])==1){
+				cout<<"ada";
+				f++;
+				break;	
+			}
+		}
+		if (f==0)
+			cout<<"tidak";
+		cout<<endl;
+	}
+	return 0;
+}
