@@ -100,4 +100,53 @@ int diagonal1(char *z){
 		 d11[]="qnngwoawmfw", 
 		 d12[]="lboneodnvpos", 
 		 d13[]="mqfpessjavmoe", 
-		 d14[]="pozrkrwbcdbvds",
+		 d14[]="pozrkrwbcdbvds", 
+	         d15[]="odsqowqeqptsdnn",
+		 d16[]="hcgngmowhnpomb", 
+		 d17[]="nrznmpdnaaghr", 
+		 d18[]="kzcmaalartni", 
+		 d19[]="zmzrmrwkrnc", 
+		 d20[]="wsezwkdnsk", 
+		 d21[]="antjptcpa", 
+		 d22[]="tgdjwzab", 
+		 d23[]="erbsecr", 
+		 d24[]="rdocec",
+		 d25[]="jnoly", 
+		 d26[]="grtg", 
+		 d27[]="tpo", 
+		 d28[]="rz", 
+		 d29[]="a",
+		 *pd1[]={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,d13,d14,d15,d16,d17,d18,d19,d20,d21,d22,d23,d24,d25,d26,d27,d28,d29};
+	for(int x=0;x<29;x++){
+		if (strstr(*(pd1+x),z) != '\0' ||(strstr(strrev(*(pd1+x)), z) > 0))
+		{
+		f++;
+		}}
+	if(f==0)
+		return 0;
+	else
+		return 1;	
+}
+int diagonal2(char *z){
+	int f;
+	char dd1[]="n",
+		 dd2[]="sb", 
+		 dd3[]="enr", 
+		 dd4[]="sdmi", 
+		 dd5[]="wodhc", 
+		 dd6[]="rovonk", 
+		 dd7[]="efmsgna", 
+		 dd8[]="thpbptsb", 
+		 dd9[]="nmmvtarpr",
+		 dd10[]="imzvdnrnac", 
+		 dd11[]="wtdwapakccy", 
+		 dd12[]="wtlunchadzeg", 
+		 dd13[]="bnqqajqnwtelo", 
+		 dd14[]="gucmtdbwlkwctz", 
+		 dd15[]="tawgoosedrpsopa", 
+		 dd16[]="alalgowoawjorr", 
+		 dd17[]="jspnwsqpmjbnt", 
+		 dd18[]="awwtermazddg", 
+	         dd19[]="beogewmrtrj", 
+		 dd20[]="recnkgmegr", 
+		 dd21[]="eznponzne", 
