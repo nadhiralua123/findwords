@@ -71,7 +71,7 @@ int vertikal(char* z){
 		 v11[]="wombtnaaakpjbdj", 
 		 v12[]="sovsparkktwsong", 
 		 v13[]="eddogtrnnzecort", 
-		 v14[]="snmhnnsppceltpr", 
+		 v14[]="snmhnnspaceltpr", 
 		 v15[]="nbrickabbcygoza",
 	 	 *pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15};
 	for(int x=0;x<15;x++){
@@ -150,3 +150,58 @@ int diagonal2(char *z){
 	         dd19[]="beogewmrtrj", 
 		 dd20[]="recnkgmegr", 
 		 dd21[]="eznponzne", 
+		 dd22[]="aiorncst", 
+		 dd23[]="dnfqzma", 
+		 dd24[]="obzgzw", 
+		 dd25[]="qqsrz", 
+		 dd26[]="lock", 
+		 dd27[]="mdn", 
+		 dd28[]="ph", 
+		 dd29[]="o",
+		 *pdd[]={dd1,dd2,dd3,dd4,dd5,dd6,dd7,dd8,dd9,dd10,dd11,dd12,dd13,dd14,dd15,dd16,dd17,dd18,dd19,dd20,dd21,dd22,dd23,dd24,dd25,dd26,dd27,dd28,dd29};
+		 
+	for(int x=0;x<29;x++){
+	if (strstr(*(pdd+x),z) != '\0' ||(strstr(strrev(*(pdd+x)), z) > 0))
+	{
+		f++;
+		}
+	}
+	if(f==0)
+		return 0;
+	else
+		return 1;		
+}
+
+int main(){
+	int n,f;
+	int (*F_cari[])(char*)={horizontal,vertikal,diagonal1,diagonal2};
+	
+	cout<<"MENCARI KATA PADA TABEL HURUF\n\n";
+	for(int r=0;r<15;r++){
+		for(int c=0;c<15;c++){
+			cout<<az[r][c]<<" ";
+		}
+		cout<<endl;
+	}
+	cout<<"\nBanyak kata yang dicari : ";cin>>n;
+	char g[n][20];
+	cout<<"\nInput kata yang dicari : \n";
+	for (int i=0;i<n;i++){
+		cin>>g[i];
+	}
+	cout<<endl;
+	for(int a=0;a<n;a++){
+		f=0;
+		for(int y=0;y<4;y++){
+			if ((*F_cari[y])(g[a])==1){
+				cout<<"ada";
+				f++;
+				break;	
+			}
+		}
+		if (f==0)
+			cout<<"tidak";
+		cout<<endl;
+	}
+	return 0;
+}
