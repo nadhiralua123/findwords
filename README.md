@@ -56,3 +56,48 @@ int horizontal(char* z){
 	else
 		return 1;	
 }
+int vertikal(char* z){
+	int f;
+	char v1[]="tajabreaaoqlmpo", 
+		 v2[]="galsweezznbqodh", 
+		 v3[]="buwapwoccofzscn", 
+		 v4[]="wncglntggprqgrk", 
+		 v5[]="wtqmogweekonzzz", 
+		 v6[]="itlqtoosswgnzmw", 
+		 v7[]="nmduadswwmmmzsa", 
+		 v8[]="tmzwnjbeeparent", 
+		 v9[]="ehmvacqwwamztge", 
+		 v10[]="rfpvdphnnrwjdrr",
+		 v11[]="wombtnaaakpjbdj", 
+		 v12[]="sovsparkktwsong", 
+		 v13[]="eddogtrnnzecort", 
+		 v14[]="snmhnnsppceltpr", 
+		 v15[]="nbrickabbcygoza",
+	 	 *pv[]={v1,v2,v3,v4,v5,v6,v7,v8,v9,v10,v11,v12,v13,v14,v15};
+	for(int x=0;x<15;x++){
+		if (strstr(*(pv+x),z) != '\0' ||(strstr(strrev(*(pv+x)), z) > 0))
+		{
+		f++;
+		}
+	}
+	if(f==0)
+		return 0;
+	else
+		return 1;	
+}
+int diagonal1(char *z){
+	int f;
+	char d1[]="t",
+		 d2[]="ag",
+		 d3[]="jab",
+		 d4[]="aluw",
+		 d5[]="bswnw", 
+		 d6[]="rwacti",
+		 d7[]="eepgqtn", 
+		 d8[]="aewlmlmt", 
+		 d9[]="dzonoqdme", 
+		 d10[]="oictgtuzhr", 
+		 d11[]="qnngwoawmfw", 
+		 d12[]="lboneodnvpos", 
+		 d13[]="mqfpessjavmoe", 
+		 d14[]="pozrkrwbcdbvds",
